@@ -23,10 +23,46 @@ Imprime la clasificación actualizada y comprueba que se ha hecho correctamente
 
 /*2. dado 2 los siguentes arrays: 
 [1,2,3,4,5,6] y ["1", "2", "3"]
-Concatenar ambos arrays en uno solo
-*/
+Concatenar ambos arrays en uno solo*/
+
 var array1=[1,2,3,4,5,6]
 var array2=["1", "2", "3"]
 
 const array3=array1.concat(array2);
 console.log(array3)
+
+
+/*1. Dado un vector de enteros, comprobar el mayor, el menor y por último la media de todos.*/
+
+
+const calcularDatosArreglo=(arreglo)=>{
+    var numMenor=arreglo[0]
+    var numMayor=arreglo[0]
+    var suma=0;
+    var media=0;
+
+    for(i=0;i<arreglo.length;i++){
+        if (arreglo[i]<numMenor){
+            numMenor=arreglo[i];
+        }
+        if(numMayor<arreglo[i]){
+            numMayor=arreglo[i]
+        }
+        suma=suma+arreglo[i]
+    }
+    
+    media=suma/arreglo.length
+    
+    console.log(`El numero menor del arreglo es ${numMenor}`)
+    console.log( `El numero mayor del arreglo es ${numMayor}`)
+    console.log( `La media del arreglo es ${media}`)
+}
+var nums=[ 6,3,4,10]
+calcularDatosArreglo(nums)
+
+
+
+
+
+
+
