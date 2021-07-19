@@ -1,8 +1,5 @@
-/*1. Dado un vector de enteros, comprobar el mayor, el menor y por último la media de todos.
 
-2. dado 2 los siguentes arrays: 
-[1,2,3,4,5,6] y ["1", "2", "3"]
-Concatenar ambos arrays en uno solo
+/*
 3. 
 En este ejercicio vas a escribir el código en el editor online. Intenta realizar el siguiente script :
 
@@ -17,9 +14,35 @@ Celia adelanta a Raúl
 Antonio es descalificado y se elimina del concurso
 Detrás de Ana y antes de Oswaldo se clasifican dos nuevos concursantes: Roberto y Amaya, en ese orden
 Hay una nueva participante que pasa a encabezar la clasificación: Marta
-Imprime la clasificación actualizada y comprueba que se ha hecho correctamente
+Imprime la clasificación actualizada y comprueba que se ha hecho correctamente */
 
-*/
+var clasificaciones=["ana","oswaldo","raul","celia","maria","antonio"]
+
+function intercambiarPosiciones(arr){
+console.log("Posicion inicial")
+imprimirPosiciones(arr)
+
+var temporal=arr[2]
+arr[2]=arr[3]
+arr[3]=temporal
+
+arr.splice(arr.length-1)
+
+arr.splice(1,0,"roberto","Amaya")
+
+arr.unshift("Martha")
+
+console.log("Posicion final")
+imprimirPosiciones(arr)
+
+}
+function imprimirPosiciones(arreglo){
+    for (i=0;i<arreglo.length;i++){
+        console.log("puesto " +(i+1)+ " "+ arreglo[i])
+       }
+}
+intercambiarPosiciones(clasificaciones)
+
 
 /*2. dado 2 los siguentes arrays: 
 [1,2,3,4,5,6] y ["1", "2", "3"]
